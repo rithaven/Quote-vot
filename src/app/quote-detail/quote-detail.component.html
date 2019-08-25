@@ -2,4 +2,10 @@
 <p>Upvote:{{quote.upvoteS}}</p>
 <p>Downvote:{{quote.downvotes}}</p>
 <p>This quote will be complete in {{quote.completeDate|dateCount}} days</p>
+
+<p>Upvote: {{likes}}</p>
+<p>Downvote: {{dislikes}}</p>
+<button (click)= 'likeButtonClick()' class="btn-outline-danger">UpVote</button>
+<button (click)= 'disilikeButtonClick()' class="btn-outline-danger">downVote</button>
+
 <button (click)= 'quoteDelete(true)' class="btn-outline-danger">Delete Quote</button>
