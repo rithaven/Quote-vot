@@ -19,6 +19,7 @@ import { QuoteComponent } from './quote/quote.component';
     QuoteDetailComponent,
     QuoteFormComponent,
     QuoteComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<p>quote-form works!</p>
+
 <div class="container-fruid">
 
     <h2 class="text-center"> Create a new Quote</h2>
@@ -27,7 +27,7 @@
         Display {{newQuote.description}}
         <div class="form-group">
 
-            <label for="complete">completion</label>
+            <label for="complete">Done on</label>
             <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel"
                 required>
             <div [hidden]="completeDate.valid || compleDate.pristine" class="alert alert-danger">
