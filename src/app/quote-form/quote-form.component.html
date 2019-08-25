@@ -3,7 +3,7 @@
 
     <h2 class="text-center"> Create a new Quote</h2>
     <hr>
-    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' style="background-color: #E666;">
         <div class="form-group">
 
             <label for="name">Author</label>
@@ -14,16 +14,17 @@
             </div>
         </div>
         <!--Testing to see if we get any data-->
-        Display{{newQuote.name}}
+        Display {{newQuote.name}}
         <div class="form-group">
 
-            <label for="description"> wite Quote</label>
-            <textarea class="form-control" id="descrition" rows="2" [(ngModel)]="newQuote.description" name="description"
+            <label for="description"> write Quote</label>
+            <textarea class="form-control" id="descrition" rows="4" [(ngModel)]="newQuote.description" name="description"
                 #description="ngModel" required></textarea>
             <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-                <p>Description is required</p>
+                <p>Quote  is required</p>
             </div>
         </div>
+        Display {{newQuote.description}}
         <div class="form-group">
 
             <label for="complete">completion</label>
