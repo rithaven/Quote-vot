@@ -6,11 +6,16 @@
         <div class="col-md-4">
             <div *ngFor='let quote of quotes;let i=index'>
                 <div>
+                    <ul>
                     <h6 id={{i}} appStrikethrough>{{quote.Quotess}} due on {{quote.completeDate|date|uppercase}}</h6>
                     <button (click)='toggleDetails(i)' class="btn btn-primary"> View Quotes Details</button>
+                   <li>{{quote.name}}</li>
+                    </ul>   
                 </div>
                 <div *ngIf='quote.showDescription'>
                     <app-quote-detail [quote]='quote' (isComplete)='deleteQuotes($event,i)'></app-quote-detail>
+                    <button  class="btn btn-outline-info" (click)="upvote(i)">Upvote</button>
+                    <button id="p" class="btn btn-outline-info" (click)="downvote(i)">Downvote</button>
                 </div>
             </div>
         </div>
