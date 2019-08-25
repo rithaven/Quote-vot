@@ -11,14 +11,19 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { Quote } from './quote';
 import { QuoteComponent } from './quote/quote.component';
 
+import { HighlightDirective } from './highlight.directive';
+import { LikeComponent } from './like/like.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     StrikethroughDirective,
     DateCountPipe,
+    QuoteComponent,
     QuoteDetailComponent,
     QuoteFormComponent,
-    QuoteComponent
+    HighlightDirective,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
