@@ -17,7 +17,7 @@
         Display{{newQuote.name}}
         <div class="form-group">
 
-            <label for="description">Description</label>
+            <label for="description"> wite Quote</label>
             <textarea class="form-control" id="descrition" rows="2" [(ngModel)]="newQuote.description" name="description"
                 #description="ngModel" required></textarea>
             <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
@@ -32,7 +32,7 @@
             <div [hidden]="completeDate.valid || compleDate.pristine" class="alert alert-danger">
                 <p>Date is required</p>
             </div>
-
-            <button type="submit" class="btn btn-success"> Add Quote</button>
         </div>
+        <button type="submit" class="btn btn-success"> Add Quote</button>
     </form>
+</div>
