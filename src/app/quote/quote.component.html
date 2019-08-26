@@ -4,13 +4,14 @@
     <div class="row">
         <div class="col-md-4">
             <div *ngFor='let quote of quotes;let i=index'>
-                <h4 appStrikethrough *ngIf="highestUpvote()===quote && quote.UpvoteS>0">{{quote.quote}}</h4>
-                <h3 *ngIf="highestUpvote()!==quote.UpvoteS || quote.UpvoteS===0">{{quote.quote}}</h3>
+                <li id={{i}} appStrikethrough *ngIf="highestUpvote()===quote.upvoteS && quote.upvoteS>0">{{quote.description}}</li>
+                <li *ngIf="highestUpvote()!==quote.upvoteS || quote.upvoteS===0">{{quote.description}}</li>
+                <p > POsted  on {{quote.completeDate|date|uppercase}}</p>
                 <div>
                     
-                    <h6 id={{i}}>POsted  on {{quote.completeDate|date|uppercase}}</h6>
+                   
                     <button (click)='toggleDetails(i)' class="btn btn-primary"> View Quotes Details</button>
-                   <li>{{quote.name}}</li>
+                   
                     
                 </div>
                 <div *ngIf='quote.showDescription'>
@@ -19,7 +20,6 @@
                     <button  class="btn btn-outline-info" (click)="upvote(i)">Upvote</button>
                     <button id="p" class="btn btn-outline-info" (click)="downvote(i)">Downvote</button>
 
-                    <app-quote-detail [quote]='quote'(isComplete) ='deleteQuotes($event,i)'></app-quote-detail>
                     
               
                     
